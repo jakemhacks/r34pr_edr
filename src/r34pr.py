@@ -48,3 +48,21 @@ Build Phase 1 - Process Monitoring
 
 """
 
+import psutil
+
+
+def process_monitor():
+    # This is the main process monitor
+    # it will take the name, pid and username of each process
+    for proc in psutil.process_iter(['pid','name', 'username']):
+        print(f"{proc.ppid()} : {proc.name()} : {proc.is_running()}")
+
+    # Make a database of running processes w/ info
+
+
+def main():
+    process_monitor()
+
+
+if __name__ == "__main__":
+    main()
