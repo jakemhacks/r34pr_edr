@@ -1,7 +1,20 @@
 # R34PR EDR
-<div style="text-align: center;">
-    <img src="/assets/r34pr.png" alt="Reaper EDR Logo" />
-</div>
-R34PR (Reaper) EDR is an educational project I am building. I am trying to get more practice writing programs in python, as well as learning the ins and outs of EDR. This is in no way meant to be an EDR solution that people will use. I am still learning both python and EDR fundamentals.
 
-However, if you are interested in expanding on this project, feel free to do so.
+Python Endpoint Detection and Response Project.
+
+---
+
+## About
+
+This is, first and foremost, a learning project.
+
+R34PR is **not intended** for real world use. It might get there eventually but
+that's not really the plan for now.
+
+---
+
+These are my objectives with R34PR EDR:
+
+- Python practice (of course)
+- Deeper understanding of EDR internals and functions
+- I will also be using this as a target for offensive testing.
