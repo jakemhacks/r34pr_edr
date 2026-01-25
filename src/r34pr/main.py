@@ -18,7 +18,7 @@
 #              NOT FOR REAL-WORLD USE!
 #
 ###########################################################
-from . import sensor
+from .sensors import kernel_sensor, network_sensor
 
 
 def welcome() -> None:
@@ -31,11 +31,14 @@ def main():
     welcome()
     print("======= Initiating R34PR scan =======")
 
-    cpu_perc: float = sensor.get_cpu_percent()
+    cpu_perc: float = kernel_sensor.get_cpu_percent()
     print(f"Current CPU usage: {cpu_perc}\n")
 
     print("======= Current Running Processes")
-    sensor.print_procs()
+    kernel_sensor.print_procs()
+
+    # This is just to make sure it's working
+    network_sensor.get_interfaces()
 
 
 if __name__ == "__main__":
