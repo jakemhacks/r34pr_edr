@@ -18,11 +18,25 @@
 #              NOT FOR REAL-WORLD USE!
 #
 ###########################################################
+from . import sensor
 
-import psutil
+
+def welcome() -> None:
+    print("Welcome to R34PR EDR")
+    print("Written by a guy named Jake")
+    print("This is a learning project....it's not intended for real use....yet\n")
+
 
 def main():
-    return
+    welcome()
+    print("======= Initiating R34PR scan =======")
+
+    cpu_perc: float = sensor.get_cpu_percent()
+    print(f"Current CPU usage: {cpu_perc}\n")
+
+    print("======= Current Running Processes")
+    sensor.print_procs()
+
 
 if __name__ == "__main__":
     main()
